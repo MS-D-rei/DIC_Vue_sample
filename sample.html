@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="header-title">
+    <h1>User form</h1>
+  </div>
+
+  <div id='adding-user-form'>
+    <input v-model='name' placeholder="your name">
+    <input v-model="course" placeholder="course name">
+    <input v-model="period" placeholder="course period">
+    <button v-on:click="addUser">
+      add user
+    </button>
+
+    <ol>
+      <li v-for='user in users' v-bind:key="user.id">
+        id: {{ user.id }},  name: {{ user.name }}, course: {{user.course}}, period: {{ user.period }}
+      </li>
+    </ol>
+  </div>
+  
+</body>
+<script src="sample.js"></script>
+</html>
